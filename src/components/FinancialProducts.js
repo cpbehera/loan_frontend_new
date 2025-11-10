@@ -39,7 +39,7 @@ const FinancialProducts = ({ onApplyClick }) => {
 
   // Fetch loan products from backend
   useEffect(() => {
-    fetch("https://loan-backend-new.onrender.com/loan-products")
+    fetch("https://loan-backend-new.onrender.com/api/loan-products")
       .then((res) => res.json())
       .then((data) => setLoanProducts(data))
       .catch((err) => {
