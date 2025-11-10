@@ -1,0 +1,171 @@
+/* src/styles/App.css */
+/* Color Scheme from WhatsApp Image */
+:root {
+  /* Primary Colors */
+  --primary-blue: #2563eb;
+  --primary-dark-blue: #1e40af;
+  --primary-light-blue: #3b82f6;
+  
+  /* Secondary Colors */
+  --secondary-teal: #0d9488;
+  --secondary-light-teal: #14b8a6;
+  
+  /* Neutral Colors */
+  --dark-gray: #1f2937;
+  --medium-gray: #4b5563;
+  --light-gray: #9ca3af;
+  --background-gray: #f3f4f6;
+  --white: #ffffff;
+  
+  /* Accent Colors */
+  --accent-purple: #7c3aed;
+  --accent-pink: #ec4899;
+  --accent-orange: #f59e0b;
+  
+  /* Gradient Combinations */
+  --gradient-primary: linear-gradient(135deg, var(--primary-blue), var(--primary-dark-blue));
+  --gradient-secondary: linear-gradient(135deg, var(--secondary-teal), var(--secondary-light-teal));
+  --gradient-accent: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
+}
+
+/* Apply this color scheme to all components */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #FAF5FF 0%, #FDF2F8 50%, #FFF7ED 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Common Button Styles */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #545b62;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+.btn-outline:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Header Styles */
+.header {
+  color: white;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+  background-color: #34495e;
+}
+
+/* Main content padding to account for fixed header */
+main {
+  min-height: calc(100vh - 160px);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #34495e;
+  color: white;
+  padding: 2rem 0 1rem;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: #bdc3c7;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid #4a6572;
+  padding-top: 1rem;
+  text-align: center;
+  color: #bdc3c7;
+}

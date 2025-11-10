@@ -1,0 +1,554 @@
+.testimonials-appx {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #FAF5FF 0%, #FFFFFF 50%, #EFF6FF 100%);
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Header */
+.section-header-appx {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.testimonials-appx .section-badge-appx {
+    display: inline-block;
+    background: linear-gradient(90deg, #FFEDD4 0%, #FEF9C2 100%);
+    color: #CA3500;
+    padding: 10px 25px;
+    border: 1.6px solid #FFB86A;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.section-header-appx h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin: 15px 0;
+    line-height: 1.2;
+}
+
+.testimonials-appx .section-header-appx h2>span {
+    background: linear-gradient(90deg, #9810FA 0%, #E60076 100%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* for Firefox */
+}
+
+.testimonials-appx .section-header-appx p {
+    font-size: 20px;
+    color: #4A5565;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+    max-width: 700px;
+}
+
+/* Slider Container */
+.testimonial-slider-container {
+    position: relative;
+    margin-bottom: 40px;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.testimonials-slider-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    gap: 30px;
+}
+
+.testimonial-slide {
+    flex: 0 0 calc(33.333% - 20px);
+    min-width: 0;
+}
+
+/* Navigation Buttons */
+.slider-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 2px solid #f1f5f9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    color: #4A5565;
+}
+
+.slider-nav-btn:hover {
+    background: linear-gradient(135deg, #9810FA 0%, #E60076 100%);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 25px rgba(152, 16, 250, 0.3);
+}
+
+.slider-prev {
+    left: -25px;
+}
+
+.slider-next {
+    right: -25px;
+}
+
+/* Testimonial Card Base Styles */
+.testimonial-card-appx {
+    border-radius: 25px;
+    padding: 40px 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+    height: 100%;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.testimonial-card-appx:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Different Background Colors for Cards */
+.card-bg-1 {
+    background: linear-gradient(135deg, #FFF5F5 0%, #FFFFFF 50%, #FEF2F2 100%);
+}
+
+.card-bg-2 {
+    background: linear-gradient(135deg, #F0FFF4 0%, #FFFFFF 50%, #F0FFF4 100%);
+}
+
+.card-bg-3 {
+    background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 50%, #EFF6FF 100%);
+}
+
+.card-bg-4 {
+    background: linear-gradient(135deg, #FAF5FF 0%, #FFFFFF 50%, #FAF5FF 100%);
+}
+
+.card-bg-5 {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FFFFFF 50%, #FFFBEB 100%);
+}
+
+.card-bg-6 {
+    background: linear-gradient(135deg, #F0FDF4 0%, #FFFFFF 50%, #F0FDF4 100%);
+}
+
+/* Different Border Colors for Cards */
+.card-border-1 {
+    border-color: #FEB2B2;
+}
+
+.card-border-2 {
+    border-color: #9AE6B4;
+}
+
+.card-border-3 {
+    border-color: #90CDF4;
+}
+
+.card-border-4 {
+    border-color: #D6BCFA;
+}
+
+.card-border-5 {
+    border-color: #FBD38D;
+}
+
+.card-border-6 {
+    border-color: #68D391;
+}
+
+/* Hover effects for different cards */
+.card-bg-1:hover {
+    background: linear-gradient(135deg, #FED7D7 0%, #FFF5F5 50%, #FEB2B2 100%);
+}
+
+.card-bg-2:hover {
+    background: linear-gradient(135deg, #C6F6D5 0%, #F0FFF4 50%, #9AE6B4 100%);
+}
+
+.card-bg-3:hover {
+    background: linear-gradient(135deg, #BEE3F8 0%, #EFF6FF 50%, #90CDF4 100%);
+}
+
+.card-bg-4:hover {
+    background: linear-gradient(135deg, #E9D8FD 0%, #FAF5FF 50%, #D6BCFA 100%);
+}
+
+.card-bg-5:hover {
+    background: linear-gradient(135deg, #FEEBC8 0%, #FFFBEB 50%, #FBD38D 100%);
+}
+
+.card-bg-6:hover {
+    background: linear-gradient(135deg, #C6F6D5 0%, #F0FDF4 50%, #68D391 100%);
+}
+
+/* Quote Icon */
+.quote-icon-appx {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    opacity: 0.1;
+    transition: all 0.3s ease;
+}
+
+/* Different quote icon colors for different cards */
+.card-bg-1 .quote-icon-appx { color: #E53E3E; }
+.card-bg-2 .quote-icon-appx { color: #38A169; }
+.card-bg-3 .quote-icon-appx { color: #3182CE; }
+.card-bg-4 .quote-icon-appx { color: #805AD5; }
+.card-bg-5 .quote-icon-appx { color: #DD6B20; }
+.card-bg-6 .quote-icon-appx { color: #38A169; }
+
+.testimonial-card-appx:hover .quote-icon-appx {
+    opacity: 0.2;
+    transform: scale(1.1);
+}
+
+/* Rating */
+.rating-appx {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 4px;
+}
+
+.star-filled {
+    font-size: 16px;
+}
+
+.star-empty {
+    color: #e2e8f0;
+    font-size: 16px;
+}
+
+/* Different star colors for different cards */
+.card-bg-1 .star-filled { color: #E53E3E; }
+.card-bg-2 .star-filled { color: #38A169; }
+.card-bg-3 .star-filled { color: #3182CE; }
+.card-bg-4 .star-filled { color: #805AD5; }
+.card-bg-5 .star-filled { color: #DD6B20; }
+.card-bg-6 .star-filled { color: #38A169; }
+
+/* Testimonial Content */
+.testimonial-content-appx {
+    flex: 1;
+    margin-bottom: 25px;
+}
+
+.testimonial-content-appx p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #4A5565;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Client Info */
+.client-info-appx {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.client-avatar-appx {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* Different avatar backgrounds for different cards */
+.card-bg-1 .client-avatar-appx { background: linear-gradient(135deg, #E53E3E 0%, #FC8181 100%); }
+.card-bg-2 .client-avatar-appx { background: linear-gradient(135deg, #38A169 0%, #68D391 100%); }
+.card-bg-3 .client-avatar-appx { background: linear-gradient(135deg, #3182CE 0%, #63B3ED 100%); }
+.card-bg-4 .client-avatar-appx { background: linear-gradient(135deg, #805AD5 0%, #B794F4 100%); }
+.card-bg-5 .client-avatar-appx { background: linear-gradient(135deg, #DD6B20 0%, #F6AD55 100%); }
+.card-bg-6 .client-avatar-appx { background: linear-gradient(135deg, #38A169 0%, #68D391 100%); }
+
+.client-details-appx {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.client-details-appx strong {
+    color: #1a202c;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.client-details-appx span {
+    color: #4A5565;
+    font-size: 14px;
+}
+
+.client-location-appx {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #718096;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.location-icon {
+    font-size: 10px;
+}
+
+/* Background Gradient */
+.testimonial-gradient-appx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+/* Different gradients for different cards */
+.card-bg-1 .testimonial-gradient-appx { background: linear-gradient(135deg, #FED7D7 0%, #FEB2B2 100%); }
+.card-bg-2 .testimonial-gradient-appx { background: linear-gradient(135deg, #C6F6D5 0%, #9AE6B4 100%); }
+.card-bg-3 .testimonial-gradient-appx { background: linear-gradient(135deg, #BEE3F8 0%, #90CDF4 100%); }
+.card-bg-4 .testimonial-gradient-appx { background: linear-gradient(135deg, #E9D8FD 0%, #D6BCFA 100%); }
+.card-bg-5 .testimonial-gradient-appx { background: linear-gradient(135deg, #FEEBC8 0%, #FBD38D 100%); }
+.card-bg-6 .testimonial-gradient-appx { background: linear-gradient(135deg, #C6F6D5 0%, #68D391 100%); }
+
+.testimonial-card-appx:hover .testimonial-gradient-appx {
+    opacity: 0.05;
+}
+
+/* Slider Dots */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 60px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: linear-gradient(135deg, #9810FA 0%, #E60076 100%);
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background: #9810FA;
+    transform: scale(1.1);
+}
+
+/* Stats Bar */
+.testimonials-stats-appx {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.stat-item-appx {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 15px;
+    border: 2px solid #D1D5DC;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.stat-item-appx span{
+    font-size: 25px;
+}
+
+.testimonials-stats-appx .stat-number-appx {
+    font-size: 14px;
+    font-weight: 400;
+    color: #4A5565;
+}
+
+.testimonials-stats-appx .stat-label-appx {
+    color: #0A0A0A;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .testimonial-slide {
+        flex: 0 0 calc(50% - 15px);
+    }
+    
+    .slider-prev {
+        left: -15px;
+    }
+    
+    .slider-next {
+        right: -15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-appx {
+        padding: 60px 0;
+    }
+
+    .section-header-appx h2 {
+        font-size: 36px;
+    }
+
+    .section-header-appx p {
+        font-size: 18px;
+    }
+
+    .testimonial-slide {
+        flex: 0 0 calc(100% - 10px);
+    }
+
+    .testimonial-card-appx {
+        padding: 30px 20px;
+        min-height: 280px;
+    }
+
+    .slider-nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .slider-prev {
+        left: -10px;
+    }
+    
+    .slider-next {
+        right: -10px;
+    }
+
+    .testimonials-stats-appx {
+        gap: 20px;
+        padding: 30px 20px;
+    }
+
+    .stat-item-appx {
+        padding: 15px;
+    }
+
+    .stat-number-appx {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header-appx h2 {
+        font-size: 28px;
+    }
+
+    .section-header-appx p {
+        font-size: 16px;
+    }
+
+    .section-badge-appx {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    .testimonial-card-appx {
+        padding: 25px 15px;
+    }
+
+    .testimonial-content-appx p {
+        font-size: 14px;
+    }
+
+    .client-avatar-appx {
+        width: 45px;
+        height: 45px;
+        font-size: 13px;
+    }
+
+    .client-details-appx strong {
+        font-size: 15px;
+    }
+
+    .client-details-appx span {
+        font-size: 13px;
+    }
+    
+    .slider-nav-btn {
+        display: none;
+    }
+
+    .testimonials-stats-appx {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+        padding: 30px 0;
+    }
+
+    .testimonials-stats-appx .stat-label-appx {
+        font-size: 13px;
+    }
+
+    .stat-item-appx{
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .testimonials-appx .container{
+        padding: 0 5px;
+    }
+
+    .testimonials-stats-appx .stat-label-appx {
+        font-size: 12px;
+    }
+}

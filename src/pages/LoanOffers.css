@@ -1,0 +1,306 @@
+/* src/pages/LoanOffers.css */
+.loan-offers {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding-bottom: 50px;
+}
+
+.offers-header {
+  background: linear-gradient(135deg, #1a3a5f 0%, #2c5282 100%);
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.offers-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.offers-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.offer-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.offer-card.featured {
+  border: 2px solid #4fd1c5;
+  transform: scale(1.02);
+}
+
+.featured-badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: linear-gradient(135deg, #4fd1c5 0%, #38b2ac 100%);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.loan-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #4fd1c5 0%, #38b2ac 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.card-header h2 {
+  color: #1a3a5f;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.interest-rate {
+  background: #4fd1c5;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.offer-details {
+  margin-bottom: 25px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.detail-item i {
+  width: 30px;
+  height: 30px;
+  background: #4fd1c5;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 0.9rem;
+}
+
+.detail-item div {
+  flex: 1;
+}
+
+.detail-item span {
+  display: block;
+  font-size: 0.8rem;
+  color: #718096;
+  margin-bottom: 2px;
+}
+
+.detail-item strong {
+  color: #1a3a5f;
+  font-size: 1rem;
+}
+
+.features {
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.features h4 {
+  color: #1a3a5f;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.features ul {
+  list-style: none;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #4a5568;
+}
+
+.features li i {
+  color: #48bb78;
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.card-footer {
+  margin-top: auto;
+}
+
+.apply-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #4fd1c5 0%, #38b2ac 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+.apply-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(79, 209, 197, 0.4);
+}
+
+.btn-link {
+  text-align: center;
+  display: block;
+  color: #4fd1c5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+  color: #38b2ac;
+}
+
+.offers-footer {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.offers-footer h3 {
+  color: #1a3a5f;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.offers-footer p {
+  color: #718096;
+  margin-bottom: 25px;
+}
+
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: #f8fafc;
+  border-radius: 8px;
+  color: #4a5568;
+}
+
+.contact-option i {
+  color: #4fd1c5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .offers-header {
+    padding: 40px 0;
+  }
+  
+  .offers-header h1 {
+    font-size: 2rem;
+  }
+  
+  .offer-card {
+    padding: 20px;
+  }
+  
+  .contact-options {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .offers-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .loan-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .interest-rate {
+    font-size: 1.1rem;
+    padding: 6px 12px;
+  }
+}

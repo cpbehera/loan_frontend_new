@@ -1,0 +1,126 @@
+/* ====== Container ====== */
+.loan-status-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.loan-status-container h1 {
+  text-align: center;
+  color: #0052cc;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* ====== Table Styles ====== */
+.loan-status-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loan-status-table thead {
+  background-color: #0052cc;
+  color: #ffffff;
+}
+
+.loan-status-table th,
+.loan-status-table td {
+  padding: 14px 18px;
+  text-align: left;
+}
+
+.loan-status-table th {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.loan-status-table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+.loan-status-table tbody tr:hover {
+  background-color: #f5f9ff;
+}
+
+/* ====== Status Badges ====== */
+.status {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Pending status */
+.status.pending {
+  background-color: #fff4e5;
+  color: #d9822b;
+  border: 1px solid #d9822b;
+}
+
+/* Approved status */
+.status.approved {
+  background-color: #e5f9ed;
+  color: #28a745;
+  border: 1px solid #28a745;
+}
+
+/* Rejected status */
+.status.rejected {
+  background-color: #ffeaea;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+/* ====== Responsive Table ====== */
+@media (max-width: 768px) {
+  .loan-status-container {
+    padding: 15px;
+  }
+
+  .loan-status-table thead {
+    display: none;
+  }
+
+  .loan-status-table,
+  .loan-status-table tbody,
+  .loan-status-table tr,
+  .loan-status-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .loan-status-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .loan-status-table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .loan-status-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: calc(50% - 15px);
+    text-align: left;
+    font-weight: 600;
+    color: #555;
+  }
+}

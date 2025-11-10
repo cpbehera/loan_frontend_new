@@ -1,0 +1,107 @@
+/* src/components/LoanPopup.css */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px; /* some space on edges */
+}
+
+/* popup content scrollable */
+.popup-content {
+  background: #fff;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;       /* 👈 limits height */
+  overflow-y: auto;       /* 👈 enables vertical scroll */
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+/* optional: customize scrollbar */
+.popup-content::-webkit-scrollbar {
+  width: 8px;
+}
+.popup-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.popup-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+.popup-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.loan-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.loan-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.01rem;
+  color: #000;
+}
+
+.loan-form input {
+  padding: 0.2rem;
+  border-radius: 14px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  background: #28a745;
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: #218838;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .loan-form label{
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .loan-form label{
+    font-size: 0.8rem;
+  }
+}

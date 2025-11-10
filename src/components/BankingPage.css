@@ -1,0 +1,596 @@
+/* BankingPage.css - Table Layout Version - Fixed Mobile */
+.banking-page {
+  width: 100%;
+  background: linear-gradient(135deg, #f8fafc 0%, #0480fd 100%);
+  display: flex;
+  flex-direction: column;
+  min-width: 80vw;
+}
+
+.banking-container {
+  flex: 1;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Banking page header */
+.banking-header {
+  text-align: center;
+  padding: 60px 20px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  width: 100%;
+}
+
+.banking-header h1 {
+  color: white;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.banking-header p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.3rem;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Close button */
+.banking-close-btn {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 10001;
+  transition: all 0.3s ease;
+}
+
+.banking-close-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+}
+
+/* Main content area */
+.banking-main-content {
+  flex: 1;
+  padding: 40px 20px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Loan summary */
+.loan-summary-card {
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
+  margin-bottom: 40px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e2e8f0;
+  text-align: center;
+}
+
+.loan-summary-card h3 {
+  color: #1e293b;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.summary-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 50px;
+  margin: 0 auto;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 2px solid #f1f5f9;
+  font-size: 1.1rem;
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-item span:first-child {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.summary-item span:last-child {
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.approved {
+  color: #10b981;
+  font-weight: 700;
+}
+
+/* Banks Table Layout */
+.banks-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.banks-container {
+  flex: 1;
+  padding: 0;
+}
+
+.banks-container h4 {
+  color: #1e293b;
+  font-size: 1.8rem;
+  margin-bottom: 35px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Banks Table */
+.banks-table {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  overflow-x: auto;
+}
+
+.table-container {
+  min-width: 600px;
+  width: 100%;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: minmax(150px, 2fr) minmax(100px, 1.5fr) minmax(80px, 1fr) minmax(120px, 1.5fr) minmax(120px, 1.5fr);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 15px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  align-items: center;
+  gap: 10px;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: minmax(150px, 2fr) minmax(100px, 1.5fr) minmax(80px, 1fr) minmax(120px, 1.5fr) minmax(120px, 1.5fr);
+  padding: 20px 15px;
+  border-bottom: 1px solid #e2e8f0;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.table-row:hover {
+  background: #f8fafc;
+}
+
+.table-row.selected {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  border-left: 4px solid #10b981;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+/* Table Cells */
+.bank-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.bank-logo-table {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.bank-name-table {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-cell {
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.roi-cell {
+  color: #10b981;
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.amount-cell {
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* Action Button in Table */
+.select-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 120px;
+  margin: 0 auto;
+  display: block;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.select-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+}
+
+.select-btn.selected {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Action Section */
+.action-section {
+  text-align: center;
+  margin-top: 40px;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.confirm-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+}
+
+/* Note Section */
+.note-section {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.note-section p {
+  margin: 0;
+  color: #856404;
+  font-size: 1rem;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 100px 20px;
+  font-size: 1.5rem;
+  color: #64748b;
+}
+
+/* No Banks State */
+.no-banks {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+.no-banks p {
+  font-size: 1.2rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Mobile-First Responsive Design */
+@media (max-width: 768px) {
+  .banking-header {
+    padding: 50px 15px 25px;
+  }
+  
+  .banking-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .banking-header p {
+    font-size: 1.1rem;
+  }
+  
+  .banking-main-content {
+    padding: 30px 15px;
+  }
+  
+  .banks-table {
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .table-container {
+    min-width: 550px;
+  }
+  
+  .table-header {
+    grid-template-columns: minmax(130px, 2fr) minmax(90px, 1.2fr) minmax(70px, 0.8fr) minmax(100px, 1.2fr) minmax(100px, 1.2fr);
+    padding: 15px 12px;
+    font-size: 0.9rem;
+    gap: 8px;
+  }
+  
+  .table-row {
+    grid-template-columns: minmax(130px, 2fr) minmax(90px, 1.2fr) minmax(70px, 0.8fr) minmax(100px, 1.2fr) minmax(100px, 1.2fr);
+    padding: 15px 12px;
+    gap: 8px;
+  }
+  
+  .bank-name-cell {
+    gap: 10px;
+  }
+  
+  .bank-logo-table {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .bank-name-table {
+    font-size: 0.9rem;
+  }
+  
+  .product-cell,
+  .roi-cell,
+  .amount-cell {
+    font-size: 0.85rem;
+  }
+  
+  .select-btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    max-width: 100px;
+  }
+  
+  .banking-close-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .loan-summary-card {
+    padding: 25px;
+    margin-bottom: 30px;
+  }
+  
+  .summary-details {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .banks-container h4 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banking-header {
+    padding: 40px 12px 20px;
+  }
+  
+  .banking-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .banking-header p {
+    font-size: 1rem;
+  }
+  
+  .banking-main-content {
+    padding: 20px 12px;
+  }
+  
+  .banks-table {
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  .table-container {
+    min-width: 500px;
+  }
+  
+  .table-header {
+    grid-template-columns: minmax(120px, 2fr) minmax(80px, 1fr) minmax(60px, 0.8fr) minmax(90px, 1fr) minmax(90px, 1fr);
+    padding: 12px 10px;
+    font-size: 0.8rem;
+    gap: 6px;
+  }
+  
+  .table-row {
+    grid-template-columns: minmax(120px, 2fr) minmax(80px, 1fr) minmax(60px, 0.8fr) minmax(90px, 1fr) minmax(90px, 1fr);
+    padding: 12px 10px;
+    gap: 6px;
+  }
+  
+  .bank-name-cell {
+    gap: 8px;
+  }
+  
+  .bank-logo-table {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+  
+  .bank-name-table {
+    font-size: 0.8rem;
+  }
+  
+  .product-cell,
+  .roi-cell,
+  .amount-cell {
+    font-size: 0.75rem;
+  }
+  
+  .select-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    max-width: 90px;
+    border-radius: 4px;
+  }
+  
+  .loan-summary-card {
+    padding: 20px 15px;
+    margin-bottom: 25px;
+  }
+  
+  .loan-summary-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  
+  .summary-item {
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+  
+  .summary-item span:last-child {
+    font-size: 1.1rem;
+  }
+  
+  .banks-container h4 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  
+  .action-section {
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .confirm-btn {
+    padding: 16px 30px;
+    font-size: 1.1rem;
+  }
+  
+  .note-section {
+    padding: 15px;
+    margin-top: 25px;
+  }
+  
+  .note-section p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 360px) {
+  .table-container {
+    min-width: 450px;
+  }
+  
+  .table-header {
+    grid-template-columns: minmax(110px, 2fr) minmax(70px, 1fr) minmax(50px, 0.8fr) minmax(80px, 1fr) minmax(80px, 1fr);
+    padding: 10px 8px;
+    font-size: 0.75rem;
+    gap: 4px;
+  }
+  
+  .table-row {
+    grid-template-columns: minmax(110px, 2fr) minmax(70px, 1fr) minmax(50px, 0.8fr) minmax(80px, 1fr) minmax(80px, 1fr);
+    padding: 10px 8px;
+    gap: 4px;
+  }
+  
+  .bank-logo-table {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+  
+  .bank-name-table {
+    font-size: 0.65rem;
+  }
+  
+  .product-cell,
+  .roi-cell {
+    font-size: 0.6rem;
+  }
+    .amount-cell {
+    font-size: 0.5rem;
+    margin-left: 20px;
+  }
+  
+  .select-btn {
+    padding: 5px 8px;
+    font-size: 0.7rem;
+    max-width: 80px;
+  }
+}

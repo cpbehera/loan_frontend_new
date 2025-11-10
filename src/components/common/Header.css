@@ -1,0 +1,157 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparent; /* fully transparent at start */
+  color: white;
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: none;
+}
+
+.header-container {
+  max-width: 1200px;
+  background: rgba(0, 0, 0, 0.8) !important;
+  margin: auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+.header-logo img {
+  width: 30px;
+  height: auto;
+  display: block;
+}
+
+.header-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Navigation */
+.header.scrolled .header-nav {
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 8px 20px;
+  border-radius: 10px;
+}
+
+.nav-item {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+.nav-icon {
+  font-size: 1rem;
+}
+
+.arrow {
+  font-size: 0.7rem;
+}
+
+/* Hamburger Icon */
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .header-container {
+    padding: 14px 30px;
+  }
+
+  .header-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 220px;
+    background: #ff4d4d;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .header-nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 576px) {
+  .header-logo a {
+    font-size: 1.3rem;
+  }
+
+  .nav-item {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #101828;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .header-nav.active {
+    max-height: 400px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-item {
+    padding: 12px 0;
+    justify-content: center;
+  }
+}
