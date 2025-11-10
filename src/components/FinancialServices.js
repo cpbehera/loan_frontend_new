@@ -11,7 +11,7 @@ const LoanServices = ({ onApplyClick }) => {
   useEffect(() => {
     const fetchLoanServices = async () => {
       try {
-        const response = await fetch("https://loan-backend-new.onrender.com/api/loan-services");
+        const response = await fetch("https://loan-backend-new-r4xq.onrender.com/api/loan-services");
         if (!response.ok) throw new Error("Failed to fetch loan services");
         const data = await response.json();
         setLoanServices(data);
@@ -56,7 +56,7 @@ const LoanServices = ({ onApplyClick }) => {
               <div className="card-content-modern">
                 <div className="service-image-container">
                   <img
-                    src={`https://loan-backend-new.onrender.com/${service.image}`}
+                    src={`https://loan-backend-new.onrender.com${service.image}`}
                     alt={service.name}
                     className="service-image"
                     onError={(e) =>
