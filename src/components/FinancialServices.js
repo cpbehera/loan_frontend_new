@@ -56,7 +56,7 @@ const LoanServices = ({ onApplyClick }) => {
               <div className="card-content-modern">
                 <div className="service-image-container">
                   <img
-                    src={`http://localhost:5000${service.image}`}
+                    src={`https://loan-backend-new.onrender.com/${service.image}`}
                     alt={service.name}
                     className="service-image"
                     onError={(e) =>
